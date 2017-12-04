@@ -10,3 +10,9 @@ Syllabification is an essential step for many NLP tasks. I build this simple pyt
 [1]: http://ucrel.lancs.ac.uk/publications/CL2007/paper/153_Paper.pdf
 
 [2]: https://github.com/azmat21/Syllabification-for-Uyghur
+
+
+# TODO
+
+- Prepare testing materials
+- Add comments
