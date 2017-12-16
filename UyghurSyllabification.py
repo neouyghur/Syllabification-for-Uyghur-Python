@@ -65,7 +65,7 @@ class UyghurSyllabification:
         end = 1
         self.syllab(source, formatString, matchRule)
 
-        return self.show_syllabs(source)
+        return self.show_syllabs(source, mark="-")
 
 
 
@@ -75,7 +75,7 @@ class UyghurSyllabification:
         indices = [0] + self.syl_pos[::-1]
         parts = [source[i:j] for i, j in zip(indices, indices[1:] + [None])]
         self.reset()
-        return '/'.join(parts)
+        return mark.join(parts)
 
 
 
@@ -138,6 +138,9 @@ class UyghurSyllabification:
         matchRule["VCCCCV"] = 3
         matchRule["CVVCCV"] = 4
         matchRule["VV"] = 1
+
+        matchRule["VVC"] = 1 #?
+        # matchRule["VCCCVC"] = 4 #?
 
         return matchRule
 
